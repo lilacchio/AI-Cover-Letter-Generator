@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Skolo</title>
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+
+  </head>
+  <body>
+    <div class="p-3 mb-2 bg-dark text-white">
+    <div class="container">
+      <h1 class="mt-5">AI Cover Letter Generator</h1>
+
+      <div class="alert alert-primary" role="alert">
+        <h4 class="alert-heading">Next time you are unemployed and can't find a job, don't panic!</h4>
+        <p>Generate a cover letter with Cover Letter Machine. Let our team of AI writers craft an original cover letter tailored to your job in as fast as 6 seconds</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <form class="" action="/" method="post">
+            <div class="mb-3">
+              <label for="genLetter" class="form-label">Paste your whole Job Description here (Including the qualifications)!</label>
+              <textarea class="form-control" id="genLetter" name="genLetter" rows="25" placeholder="Enter job description"></textarea>
+            </div>
+            <input type="hidden" name="form" value="form">
+
+            <button type="submit" class="btn btn-danger">GENERATE NOW!</button>
+          </form>
+        </div>
+
+
+
+        <div class="col-lg-6">
+          {{cGenerated|safe}}
+        </div>
+      </div>
+
+
+    </div>
+
+    <center><a href="http://github.com/lilacchio" class="text-decoration-none">GitHub</a></center>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </div>
+  </body>
+</html>
